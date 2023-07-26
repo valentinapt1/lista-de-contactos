@@ -60,5 +60,14 @@ console.log(nuevoLenghtUnshift);
 const eliminados = contactos.splice(0,2,
     {id:6, nombre: "Lina", apellido: "Sanchez", Telefono:789515232, ciudad:"cartagena", direccion: "tv 50 #99-40"
     });
-    console.log("Elimunado:", eliminados);
+    console.log("Eliminado:", eliminados);
     console.log(contactos);
+
+    //creo funcion de eliminar contacto 
+
+console.log(contactos);
+contactos.pop();
+console.log(contactos);
+const eliminado = contactos.pop();
+console.log("Eliminado:", eliminado);
+console.log(contactos);
