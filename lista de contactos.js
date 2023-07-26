@@ -14,13 +14,12 @@ let contactos= [
 
 //agrego funcion
 
-function agregarContactos(id, Nombres, Apellidos, Telefono, Ubicacion, ciudad, direccion){
+function agregarContactos(id, Nombres, Apellidos, Telefono, ciudad, direccion){
     let lista = {
         id: id,
         Nombres: Nombres,
         Apellidos: Apellidos,
         Telefono: Telefono,
-        Ubicacion: Ubicacion,
         ciudad: ciudad,
         direccion: direccion,
     }
@@ -40,7 +39,26 @@ function agregarContactos(id, Nombres, Apellidos, Telefono, Ubicacion, ciudad, d
     function ImprimirContactos(lista){
     console.log(ImprimirContactos);
     }
-    //creo funcion de eliminar contactos
+    //creo funcion de agregar contactos
 
-    let EliminarConatcto = contactos.slice(0, 2);
-    console.log(EliminarConatcto);{}
+ console.log (contactos);
+ contactos.unshift({
+    lista:id=5, Nombres: "Carmen", Apellidos: "Cruz", Telefono: 35296456, ciudad: "Neiva", direccion: "av cali",
+ });
+
+console.log(contactos);
+
+const nuevoLenghtUnshift= contactos.unshift(
+    {id:4, Nombres:"Luz", Apellidos: "Baron", Telefono: 3604879, ciudad: "bogota", direccion: "av boyaca"},
+
+);
+console.log(contactos);
+console.log(nuevoLenghtUnshift);
+
+//Modifico contacto
+
+const eliminados = contactos.splice(0,2,
+    {id:6, nombre: "Lina", apellido: "Sanchez", Telefono:789515232, ciudad:"cartagena", direccion: "tv 50 #99-40"
+    });
+    console.log("Elimunado:", eliminados);
+    console.log(contactos);
